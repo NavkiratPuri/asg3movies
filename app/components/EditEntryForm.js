@@ -46,19 +46,26 @@ const EditEntryForm = ({ entry, onUpdateEntry, onCancel }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <h1>Edit movie form</h1>
-            <label>Title:</label>
-            <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} required />
+        <form onSubmit={handleSubmit} class="max-w-md mx-auto my-10 p-8 bg-blue-100 shadow-md rounded-lg">
+            <h1 class="text-xl font-semibold mb-6">Edit movie form</h1>
 
-            <label>Actors (comma-separated):</label>
-            <input type="text" value={actors} onChange={(e) => setActors(e.target.value)} required />
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Title:</label>
+                <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} required />
+            </div>
 
-            <label>Release Year:</label>
-            <input type="number" value={releaseYear} onChange={(e) => setReleaseYear(e.target.value)} required />
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Actors (comma-separated):</label>
+                <input type="text" value={actors} onChange={(e) => setActors(e.target.value)} required />
+            </div>
 
-            <button type="submit">Save Changes</button>
-            <button type="button" onClick={onCancel}>Cancel</button>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Release Year:</label>
+                <input type="number" value={releaseYear} onChange={(e) => setReleaseYear(e.target.value)} required />
+            </div>
+
+            <button type="submit" class="bg-blue-500 m-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Save Changes</button>
+            <button type="button" onClick={onCancel} class="bg-blue-500 m-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Cancel</button>
         </form>
     );
 };

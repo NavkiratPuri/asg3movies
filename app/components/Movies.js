@@ -57,16 +57,17 @@ const Movies = () => {
   }
 
   return (
-    <div>
-      <h1>MongoDB Data:</h1>
-      <ul>
+    <div class='text-center mx-auto max-w-4xl'>
+      <h1  class='m-4 text-3xl font-bold text-gray-800'>MongoDB Data:</h1>
+      <ul class='list-disc list-inside bg-white rounded-lg shadow-md p-6'>
         {data.map((movie, index) => (
-          <li key={index}>
+          <li key={index} class='border-b last:border-none py-4'>
             <strong>Title:</strong> {movie.title}<br />
             <strong>Actors:</strong> {movie.actors.join(', ')}<br />
             <strong>Release Year:</strong> {movie.release_year}<br />
-            <button onClick={() => handleEditMovie(movie)}>Edit</button>
-            <button onClick={() => onDeleteEntry(movie._id)}>Delete</button>
+            <button onClick={() => handleEditMovie(movie)} class="bg-blue-500 m-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Edit</button>
+
+            <button onClick={() => onDeleteEntry(movie._id)} class="bg-blue-500 m-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Delete</button>
             <br />
           </li>
         ))}

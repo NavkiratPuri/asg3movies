@@ -7,6 +7,7 @@ import Movies from '../app/components/Movies';
 import AddEntryForm from '../app/components/AddEntryForm';
 import EditEntryForm from '../app/components/EditEntryForm';
 import DeleteEntryForm from '../app/components/DeleteEntryForm';
+import  "../app/globals.css";
 
 const Admin = () => {
     const [entries, setEntries] = useState([]);
@@ -53,10 +54,9 @@ const Admin = () => {
     };
 
     return (
-        <div>
-            <h1 className='text-red-500'>IMR movie App</h1>
+        <div class='text-center'>            
             <Navbar />
-            <h1>Admin</h1>
+            <h1 class='m-4 text-3xl font-bold text-gray-800'>Admin</h1>
             <AddEntryForm onAddEntry={handleAddEntry} />
 
             {selectedEntry && !isDeleteFormVisible && (
