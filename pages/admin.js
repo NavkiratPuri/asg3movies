@@ -1,4 +1,4 @@
-// pages/admin.js
+// Admin page for managing movie entries
 
 import React, { useState, useEffect } from 'react';
 import Navbar from '../app/components/Navbar';

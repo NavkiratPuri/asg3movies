@@ -1,8 +1,6 @@
-// pages/api/editEntry.js
-
 import { MongoClient, ObjectId } from 'mongodb';
 
-export default async function handler(req, res) {
+export default async function handler(req, res) { // handles editEntry requests
     const client = new MongoClient(process.env.MONGODB_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -22,9 +20,9 @@ export default async function handler(req, res) {
             }
 
             const result = await collection.findOneAndUpdate(
-                { _id: new ObjectId(id) },
-                { $set: { title, actors, release_year } },
-                { returnOriginal: false }
+                { _id: new ObjectId(id) }, // Find the document with the specified id
+                { $set: { title, actors, release_year } }, // Update the document with the new values
+                { returnOriginal: false } // Return the updated document
             );
 
             res.status(200).json({ message: 'Entry updated successfully', entry: result.value });

@@ -1,4 +1,4 @@
-const Footer = () => {
+const Footer = () => {   //footer for website
     return (
         <footer class="bg-blue-300 mt-1 py-4 static bottom-0">
             <div class="container mx-auto text-center">

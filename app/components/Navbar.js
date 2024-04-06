@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const Navbar = () => {
+const Navbar = () => { // Navbar component for website
     return (
         <nav class="bg-blue-500 text-white text-xl p-4 flex justify-between items-center">
             <div>IMR Movie App</div>
