@@ -4,7 +4,7 @@ Welcome to the Web Development 2 Assignment 3 repository! This repository contai
 
 ## Description
 
-This assignment is part of the Web Development 2 course and includes various tasks and projects related to web development concepts and technologies.
+This assignment is part of the Web Development 2 course and links to a MongoDb Database to retrieve a list of movies which can be added to. Movies can also be deleted or edited. 
 
 
 ## Getting Started
